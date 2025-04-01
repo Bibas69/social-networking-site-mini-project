@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="main w-full h-full">
+        <form class="w-full h-screen flex items-center justify-center gap-6" autocomplete="off" enctype="multipart/form-data" action="/uploadtest" method="post">
+            <input class="file:mr-6 file:bg-yellow-600 file:rounded-md file:w-30 file:h-10 file:text-white" type="file" name="image">
+            <input class="w-30 h-10 bg-blue-700 text-white rounded-md" type="submit" value="Upload">
+        </form>
+    </div>
+</body>
+</html>

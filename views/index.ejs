@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="w-full h-screen flex flex-col gap-4 items-center justify-center">
+        <%if(typeof err !== 'undefined' && err){%>
+            <p class="text-red-600"><%=err%></p>
+        <%}%>
+        <form action="/register" method="post" class="h-130 w-90 bg-zinc-800 rounded-md text-white flex flex-col gap-8 justify-center pl-4 pr-4 tracking-tighter shadow-md shadow-zinc-900">
+            <input class="border-2 border-zinc-700 h-10 inset-shadow-zinc-900 inset-shadow-sm rounded-md p-4 outline-none bg-zinc-600" type="text" placeholder="Enter username" name="username" required>
+            <input class="border-2 border-zinc-700 h-10 inset-shadow-zinc-900 inset-shadow-sm rounded-md p-4 outline-none bg-zinc-600" type="text" placeholder="Enter name" name="name" required>            
+            <input class="border-2 border-zinc-700 h-10 inset-shadow-zinc-900 inset-shadow-sm rounded-md p-4 outline-none bg-zinc-600" type="email" placeholder="Enter email" name="email" required>
+            <input class="border-2 border-zinc-700 h-10 inset-shadow-zinc-900 inset-shadow-sm rounded-md p-4 outline-none bg-zinc-600" type="password" placeholder="Enter password" name="password" required>
+            <div class="links flex flex-col items-center gap-4">
+                <input class="bg-blue-500 w-28 h-8 rounded-md shadow-md shadow-zinc-900" type="submit" value="Create User">
+                <p>Already have an account?</p>
+                <a class="text-blue-500" href="/login">Login</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
